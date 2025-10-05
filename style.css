@@ -335,9 +335,37 @@ body:hover .cursor-dot, body:hover .cursor-outline {
     font-size: 1.1rem;
 }
 
+/* ===== ส่วนของ Image Portfolio ที่แก้ไขแล้ว ===== */
+.portfolio-image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.portfolio-image-item {
+    flex: 0 1 300px; /* ไม่ต้องขยาย, ย่อได้, ขนาดเริ่มต้น 300px */
+}
+/* ===== จบส่วนที่แก้ไข ===== */
+
+.portfolio-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #2a2a2a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-image-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary-glow);
+}
+
 /* --- Portfolio Section --- */
 .portfolio-content {
     text-align: center;
+    margin-top: 2.5rem;
 }
 
 .portfolio-content p {
